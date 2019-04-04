@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,7 +56,8 @@ public class homeFragment extends Fragment {
 //        txtUsername = view.findViewById(R.id.txt_username);
 //        txtUserCaption = view.findViewById(R.id.txt_usernamecap);
 //        txtCaption = view.findViewById(R.id.txt_caption);
-
+            lvpost = view.findViewById(R.id.lv_Post);
+            lvpost.setLayoutManager(new LinearLayoutManager(getActivity()));
         postData = new ArrayList<HashMap<String, String>>();
         url = "https://webalizainal.000webhostapp.com/apitampilpost.php";
         showData();

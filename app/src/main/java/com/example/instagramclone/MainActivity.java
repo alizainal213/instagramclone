@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
 
     @Override
-    public void onCreate( @Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private void openFragment(Fragment fragment) {
+    void openFragment(HomeFragment fragment) {
         //home fragment
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_container, fragment);
